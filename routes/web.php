@@ -21,26 +21,12 @@ Route::get('/getSubject','SubjectController@get_page')->name('get_subject');
 
 Route::post('/add_subject', 'SubjectController@store_subject')->name('add_subject');
 
-/*
-Route::post('/add_subject, [
-    'uses' => 'SubjectController@store_subject',
-    'as' => 'add_subject'
-]);
- * */
+
 
 Route::group(['middleware' => ['web']], function (){
-    Route::post('/signup',[
-        'uses' => 'UserController@postSignUp',
-        'as' => 'signup'
-    ]);
-
-    Route::post('/signin',[
-        'uses' => 'UserController@postSignIn',
-        'as' => 'signin'
-    ]);
 
     Route::get('/', function () {
-        return view('welcome');
+        return view('layouts.studentHome');
     });
 
     Route::get('/dashboard', [
@@ -48,4 +34,7 @@ Route::group(['middleware' => ['web']], function (){
         'as' => 'dashboard'
     ]);
 });
+
+
+
 
