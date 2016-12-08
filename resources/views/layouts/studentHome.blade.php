@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('home_style')
+
     <style>
         /* Remove the navbar's default margin-bottom and rounded borders */
         .navbar {
@@ -39,28 +40,11 @@
 
 @section('body_content')
     <div class="col-sm-2 sidenav">
-        <h4>Navigation</h4>
-        <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a href="#section1">Home</a></li>
-            <li><a href="#section2">My Home</a></li>
-            <li><a href="#section3">My Profile</a></li>
-            <li><a href="#section3">My Courses</a></li>
-        </ul><br>
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search..">
-            <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-        </span>
-        </div>
+        @include('include.studentHomeSideBar')
     </div>
     <div class="col-sm-8 text-left">
-        <h1>Sample Code</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <hr>
-        <h3>Test</h3>
-        <p>Lorem ipsum...</p>
+        @yield('middle_content')
     </div>
+
 @endsection
 
