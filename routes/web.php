@@ -21,6 +21,14 @@ Route::get('/getSubject','SubjectController@get_page')->name('get_subject');
 
 Route::post('/add_subject', 'SubjectController@store_subject')->name('add_subject');
 
+Route::get('/viewStudent', 'StudentController@view_student_my_home')->name('viewStudentMyHome');
+
+Route::get('/viewCourse1', 'StudentController@view_course1')->name('viewCourse1');
+
+Route::get('/viewCourse2', 'StudentController@view_course2')->name('viewCourse2');
+
+Route::get('/viewCourse3', 'StudentController@view_course3')->name('viewCourse3');
+
 
 
 Route::group(['middleware' => ['web']], function (){
@@ -28,11 +36,38 @@ Route::group(['middleware' => ['web']], function (){
     Route::get('/', function () {
         return view('layouts.studentHome');
     });
+    Route::get('/hi', function () {
+        return view('layouts.master');
+    });
 
     Route::get('/dashboard', [
         'uses' => 'UserController@getDashboard',
         'as' => 'dashboard'
     ]);
+
+
+});
+
+// rotues for student's stuff
+
+Route::group(['middleware' => ['auth','web']], function (){
+    Route::post('/signup',[
+        'uses' => 'UserController@postSignUp',
+        'as' => 'signup'
+    ]);
+
+    Route::post('/signin',[
+        'uses' => 'UserController@postSignIn',
+        'as' => 'signin'
+    ]);
+
+    Route::get('/student', 'StudentController@getStudentHomePage')->name('get_student_home_page');
+
+    Route::get('/student/my', 'StudentController@getMyHomePage')->name('get_my_home_page');
+
+    Route::get('/user{id}', function ($id){
+        //put some code here
+    });
 });
 
 
