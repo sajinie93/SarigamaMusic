@@ -38,24 +38,24 @@ class StudentController extends Controller
         return redirect()->route('all_students_route');
     }
 
-    public function view_student_my_home(){
-        return view('studentMyHome');
-    }
-    public function view_course1(){
-        return view('course1');
-    }
-    public function view_course2(){
-        return view('course2');
-    }
-    public function view_course3(){
-        return view('course3');
-    }
-    public function getStudentProfile(){
-        return view('studentProfile');                // dummy implementation
-    }
-    public function getStudentProgress(){
-        return view('studentProgress');               // dummy implementation
-    }
+//    public function view_student_my_home(){
+//        return view('studentMyHome');
+//    }
+//    public function view_course1(){
+//        return view('course1');
+//    }
+//    public function view_course2(){
+//        return view('course2');
+//    }
+//    public function view_course3(){
+//        return view('course3');
+//    }
+//    public function getStudentProfile(){
+//        return view('studentProfile');                // dummy implementation
+//    }
+//    public function getStudentProgress(){
+//        return view('studentProgress');               // dummy implementation
+//    }
 
 
 

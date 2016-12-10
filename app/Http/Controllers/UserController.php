@@ -15,13 +15,13 @@ class UserController extends Controller
 
     public function postSignUp(Request $request)
     {
-//      $email = $request['email'];
+      $email = $request['email'];
         $userName = $request['userName'];
         $password = bcrypt($request['password']);
 
         $user = new User();
         $user->email = $email;
-        $user->first_name = $first_name;
+        $user->username = $userName;
         $user->password = $password;
 
         $user->save();
