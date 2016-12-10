@@ -28,7 +28,9 @@ Route::post('/add_student', 'StudentController@add_student')->name('add_student_
 
 Route::get('/getSubject','SubjectController@get_page')->name('get_subject');
 
-Route::post('/add_subject', 'SubjectController@store_subject')->name('add_subject');
+Route::post('/storeCourse', 'CourseController@store_course')->name('store_course');
+
+Route::post('/addSubject', 'CourseController@store_course')->name('add_subject');
 //
 //Route::get('/viewStudent', 'StudentController@view_student_my_home')->name('viewStudentMyHome');
 //

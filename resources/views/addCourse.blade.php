@@ -34,35 +34,36 @@
     </div>
 
     <div class="col-sm-12" style="padding-bottom: 10%;">
-        <div class="container" style="float: left;  border-style: inset; padding-bottom: 5%; background-color: #ccd0d2;">
+        <div class="container" style="float: left;  border-style: inset; padding-bottom: 5%; ">
 
 
                 <h2>Add Course</h2>
-                <form>
+                <form action="{{route('store_course')}}" method="POST">
+                    {{csrf_field()}}
                     <div class="form-group">
                         <label for="title">Course Title:</label>
-                        <input type="text" class="form-control" id="title" placeholder="Enter course title">
+                        <input type="text" class="form-control" name='title' id="title" placeholder="Enter course title">
                     </div>
                     <div class="form-group">
                         <label for="instrument">Instrument:</label>
-                        <input type="text" class="form-control" id="instrument" placeholder="Enter instrument">
+                        <input type="text" class="form-control" name='instrument' id="instrument" placeholder="Enter instrument">
                     </div>
                     <div class="form-group">
                         <label for="fee">Course Fee:</label>
-                        <input type="text" class="form-control" id="fee" placeholder="Enter course fee">
+                        <input type="text" class="form-control" name="fee" id="fee" placeholder="Enter course fee">
                     </div>
                     <div class="form-group">
                         <label for="location">Location:</label>
-                        <input type="text" class="form-control" id="location" placeholder="Enter location">
+                        <input type="text" class="form-control" name="location" id="location" placeholder="Enter location">
                     </div>
                     <div class="form-group">
                         <label for="capacity">Student Limit:</label>
-                        <input type="text" class="form-control" id="capacity" placeholder="Enter student limit">
+                        <input type="text" class="form-control" name="capacity" id="capacity" placeholder="Enter student limit">
                     </div>
                     {{--<div class="checkbox">--}}
                         {{--<label><input type="checkbox"> Remember me</label>--}}
                     {{--</div>--}}
-                    <button type="submit" class="btn btn-default" style="float: left;color: #d9edf7; background-color: #2a88bd">Save</button>
+                    <button type="submit" class="btn btn-default" style="float:left;  color: #d9edf7; background-color: #2a88bd" value="submit">Save</button>
                 </form>
 
 
