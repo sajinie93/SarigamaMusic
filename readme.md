@@ -7,6 +7,6 @@ If you do not have .env file in the cloned project refer this video to fix that.
 
 
 ## routes
-  '/' => direct to the master layout
-  '/admin' => admin layout
+  '/' => direct to the master layout,  
+  '/admin' => admin layout,  
   '/teacher' => teacher layout
