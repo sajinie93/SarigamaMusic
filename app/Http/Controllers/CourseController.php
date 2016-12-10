@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Course;
-use App\Subject;
+
 
 use Illuminate\Http\Request;
 
@@ -20,6 +20,13 @@ class CourseController extends Controller
 
     }
 
+    public function getAllCourses(){
+        $all_courses = Course::all();   // fetch data from database
+        return view('addCourse',[
+            'courses' => $all_courses
+        ]);
+    }
+
     public function store_course(Request $request){
 
         $title = $request['title'];
@@ -27,7 +34,6 @@ class CourseController extends Controller
         $location = $request['location'];
         $fee = $request['fee'];
         $instrument = $request['instrument'];
-//        $marks = $request['marks'];
 
         $course = new Course();
         $course->title = $title;
@@ -38,10 +44,7 @@ class CourseController extends Controller
 
         $course->save();
 
-//        return redirect()->route('/dummyAddCourse');
-        return view('addCourse');
-
-
+        return redirect()->route('all_courses_route');
 
     }
 }

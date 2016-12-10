@@ -34,7 +34,7 @@
     </div>
 
     <div class="col-sm-12" style="padding-bottom: 10%;">
-        <div class="container" style="float: left;  border-style: inset; padding-bottom: 5%; ">
+        <div class="container" style="float: left;  border-style: inset; padding-bottom: 5%; background-color: white;">
 
 
                 <h2>Add Course</h2>
@@ -73,7 +73,7 @@
 
 
     <div class="col-sm-12;" style="padding-bottom: 10%; margin-top: 60% ">
-        <div class="container" style="border-style: inset; padding-bottom: 5%; width: 100%; float: left;">
+        <div class="container" style="border-style: inset; padding-bottom: 5%; width: 100%; float: left; background-color: white;">
             <h2>All Courses</h2>
 
             <div class="input-group">
@@ -86,34 +86,33 @@
             </div>
 
 
-            <table class="table table-bordered" style="margin-top: 2%;">
+            {{--<table class="table table-bordered" style="margin-top: 2%;">--}}
 
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Course Title</th>
-                    <th>Action</th>
+            <div class="row" style="padding-top: 2%;">
+                <div class="col-md-12">
+                    <table class="table table-bordered" style="border: groove;">
+                        <tr>
+                            <th>Title</th>
+                            <th>Location</th>
+                            <th>Capacity</th>
+                            <th>Fee</th>
+                            <th>Instrument
+                            </th>
+                        </tr>
 
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
-                </tbody>
-            </table>
+                        @foreach($courses as $course)
+                            <tr>
+                                <th>{{ $course->title }}</th>
+                                <th>{{ $course->location }}</th>
+                                <th>{{ $course->capacity }}</th>
+                                <th>{{ $course->fee }}</th>
+                                <th>{{ $course->instrument }}</th>
+                            </tr>
+                        @endforeach
+                    </table>
+                </div>
+            </div>
+            {{--</table>--}}
         </div>
 
     </div>

@@ -154,7 +154,7 @@
             @yield('side-bar')
         </div>
 
-        <div class="col-sm-9">
+        <div class="col-sm-10" style="background-color: mintcream">
             @yield('content')
         </div>
     </div>

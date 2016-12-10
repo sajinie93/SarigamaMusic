@@ -14,15 +14,16 @@
 
 // GET POST PUT DELETE
 
-Route::get('/addCourse', function () {
-    return view('addCourse');
-});
-
 
 Route::get('/register', function () {
     return view('registration');
 });
+
+Route::get('/course', 'CourseController@getAllCourses')->name('all_courses_route');
+
 Route::get('/students', 'StudentController@getAllStudents')->name('all_students_route');
+
+Route::get('/addCourse', 'CourseController@getAllCourses')->name('all_courses_route');
 
 Route::post('/add_student', 'StudentController@add_student')->name('add_student_route');
 
