@@ -13,6 +13,12 @@
 
 
 // GET POST PUT DELETE
+
+Route::get('/addCourse', function () {
+    return view('addCourse');
+});
+
+
 Route::get('/register', function () {
     return view('registration');
 });
