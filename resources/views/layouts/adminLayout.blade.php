@@ -23,8 +23,6 @@
         <li><a href="#section3">Class Room</a></li>
         <li><a href="#section3">Course Routing</a></li>
         <li><a href="#section3">Class Routing</a></li>
-
-
     </ul><br>
     <div class="input-group">
         <input type="text" class="form-control" placeholder="Search Blog..">
