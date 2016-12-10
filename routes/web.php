@@ -13,6 +13,9 @@
 
 
 // GET POST PUT DELETE
+Route::get('/register', function () {
+    return view('registration');
+});
 Route::get('/students', 'StudentController@getAllStudents')->name('all_students_route');
 
 Route::post('/add_student', 'StudentController@add_student')->name('add_student_route');
@@ -34,11 +37,17 @@ Route::get('/viewCourse3', 'StudentController@view_course3')->name('viewCourse3'
 Route::group(['middleware' => ['web']], function (){
 
     Route::get('/', function () {
-        return view('layouts.studentHome');
-    });
-    Route::get('/hi', function () {
         return view('layouts.master');
     });
+    Route::get('/admin', function () {
+        return view('layouts.adminLayout');
+    });
+    Route::get('/teacher', function () {
+        return view('layouts.teacherLayout');
+    });
+//    Route::get('/teacherHome', function () {
+//        return view('layouts.teacherHome');
+//    });
 
     Route::get('/dashboard', [
         'uses' => 'UserController@getDashboard',
@@ -65,9 +74,16 @@ Route::group(['middleware' => ['auth','web']], function (){
 
     Route::get('/student/my', 'StudentController@getMyHomePage')->name('get_my_home_page');
 
-    Route::get('/user{id}', function ($id){
-        //put some code here
-    });
+
+    Route::get('/user/profile', [                                        // correct version /user{id}/profile
+        'uses' => 'StudentController@getStudentProfile',
+        'as' => 'viewProfile'
+    ]);
+
+    Route::get('/user/progress', [
+        'uses' => 'StudentController@getStudentProgress',
+        'as' => 'viewProgress'
+    ]);
 });
 
 

@@ -50,6 +50,12 @@ class StudentController extends Controller
     public function view_course3(){
         return view('course3');
     }
+    public function getStudentProfile(){
+        return view('studentProfile');                // dummy implementation
+    }
+    public function getStudentProgress(){
+        return view('studentProgress');               // dummy implementation
+    }
 
 
 

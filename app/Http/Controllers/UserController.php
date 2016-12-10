@@ -15,8 +15,8 @@ class UserController extends Controller
 
     public function postSignUp(Request $request)
     {
-        $email = $request['email'];
-        $first_name = $request['first_name'];
+//      $email = $request['email'];
+        $userName = $request['userName'];
         $password = bcrypt($request['password']);
 
         $user = new User();

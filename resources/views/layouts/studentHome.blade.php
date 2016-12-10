@@ -40,9 +40,9 @@
 
 @section('body_content')
     <div class="col-sm-2 sidenav">
-        @include('include.studentHomeSideBar')
+
     </div>
-    <div class="col-sm-8 text-left">
+    <div class="col-sm-10 text-left">
         @yield('middle_content')
     </div>
 
