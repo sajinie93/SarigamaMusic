@@ -43,6 +43,8 @@ Route::post('/addSubject', 'CourseController@store_course')->name('add_subject')
 //
 
 
+
+
 Route::group(['middleware' => ['web']], function (){
 
     Route::get('/', function () {
@@ -51,8 +53,13 @@ Route::group(['middleware' => ['web']], function (){
     Route::get('/admin', function () {
         return view('layouts.adminLayout');
     });
+
     Route::get('/teacher', function () {
         return view('layouts.teacherLayout');
+    });
+
+    Route::get('/teacherSalary', function () {
+        return view('teacherSalary');
     });
 
     Route::get('/dashboard', [
