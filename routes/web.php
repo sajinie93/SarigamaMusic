@@ -26,7 +26,7 @@ Route::get('/check', function () {
 
 Route::post('/filterCourse', 'CourseController@filterCourse')->name('filter_course_table');
 
-Route::get('/course', 'CourseController@getAllCourses')->name('all_courses_route');
+Route::get('/class', 'CourseController@getAllCourses')->name('all_classes');
 
 Route::get('/students', 'StudentController@getAllStudents')->name('all_students_route');
 
@@ -40,9 +40,9 @@ Route::post('/storeCourse', 'CourseController@store_course')->name('store_course
 
 Route::post('/addSubject', 'CourseController@store_course')->name('add_subject');
 
-Route::get('/markStudentAttendance', 'StudentAttendance@markStudentAttendance')->name('mark_s_attendance');
+Route::get('/markStudentAttendance', 'StudentAttendance@markStudentAttendance')->name('mark_student_attendance');
 
-Route::get('/studentAttendanceHistory', 'StudentAttendance@getAllStudentAttendance')->name('view_s_attendance_history');
+Route::get('/studentAttendanceHistory', 'StudentAttendance@getAllStudentAttendance')->name('view_student_attendance_history');
 
 
 Route::group(['middleware' => ['web']], function (){
