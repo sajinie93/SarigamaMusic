@@ -4,7 +4,7 @@
     <h4>SaRigaMa MusIc</h4>
     <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#section1">Dashboard</a></li>
-        <li><a href="#section2">Course</a></li>
+        <li><a href="#section2">Class</a></li>
         <li><a href="#section2">Add Payment</a></li>
         <li><a href="#section2">Payment history</a></li>
         <li><a href="#section2">Teacher salary</a></li>
@@ -20,9 +20,7 @@
         <li><a href="#section2">Student Attendance History</a></li>
         <li><a href="#section2">Teacher Attendance</a></li>
         <li><a href="#section2">Teacher Attendance History</a></li>
-        <li><a href="#section3">Class Room</a></li>
-        <li><a href="#section3">Course Routing</a></li>
-        <li><a href="#section3">Class Routing</a></li>
+
     </ul><br>
     <div class="input-group">
         <input type="text" class="form-control" placeholder="Search Blog..">
