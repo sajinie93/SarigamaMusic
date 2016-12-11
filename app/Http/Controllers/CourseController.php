@@ -20,11 +20,24 @@ class CourseController extends Controller
 
     }
 
+
     public function getAllCourses(){
         $all_courses = Course::all();   // fetch data from database
         return view('addCourse',[
             'courses' => $all_courses
         ]);
+    }
+
+    public function filterCourse(){
+        $filtered_courses = Course::all();   // fetch filtered data from database
+        return view('addCourse',[
+            'courses' => $filtered_courses
+        ]);
+
+//        return view('layouts.master');
+
+
+
     }
 
     public function store_course(Request $request){

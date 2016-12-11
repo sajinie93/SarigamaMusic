@@ -5,15 +5,10 @@
         .form-control {
             /*padding-right: 150px;*/
             width: 80%;
-
         }
-
-
-
         .container {
 
             width: 80%;
-
         }
 
     </style>
@@ -77,16 +72,37 @@
             <h2>All Courses</h2>
 
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search Blog..">
+                <form action="{{route('filter_course_table')}}" method="post"  type="text" class="form-control" placeholder="Search by title | instrument | location .." name="searchValue">
                 <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">
+                    <button  type="submit" class="btn btn-default" name="search"  >
+                        {{--<a href="{{URL::route('/check')}}"></a>--}}
                         <span class="glyphicon glyphicon-search"></span>
                     </button>
                 </span>
+                    </form>
             </div>
 
 
             {{--<table class="table table-bordered" style="margin-top: 2%;">--}}
+
+            {{--@yield('table')--}}
+
+            {{--<?php--}}
+            {{--if ($_SERVER['REQUEST_METHOD'] === 'POST') {--}}
+                {{--//something posted--}}
+
+
+
+                {{--if (isset($_GET['search'])) {--}}
+                    {{--{{route('filter_course_table')}}--}}
+                {{--}--}}
+                {{--else {--}}
+                        {{--{{route('all_courses_route')}}--}}
+                    {{--}--}}
+            {{--?>--}}
+
+            {{--};--}}
+            {{--?>--}}
 
             <div class="row" style="padding-top: 2%;">
                 <div class="col-md-12">
@@ -112,7 +128,7 @@
                     </table>
                 </div>
             </div>
-            {{--</table>--}}
+
         </div>
 
     </div>
