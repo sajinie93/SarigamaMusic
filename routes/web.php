@@ -19,7 +19,14 @@ Route::get('/register', function () {
     return view('registration');
 });
 
-Route::get('/course', 'CourseController@getAllCourses')->name('all_courses_route');
+Route::get('/check', function () {
+    return view('layouts.master');
+});
+
+
+Route::post('/filterCourse', 'CourseController@filterCourse')->name('filter_course_table');
+
+Route::get('/class', 'CourseController@getAllCourses')->name('all_classes');
 
 Route::get('/students', 'StudentController@getAllStudents')->name('all_students_route');
 
@@ -32,15 +39,10 @@ Route::get('/getSubject','SubjectController@get_page')->name('get_subject');
 Route::post('/storeCourse', 'CourseController@store_course')->name('store_course');
 
 Route::post('/addSubject', 'CourseController@store_course')->name('add_subject');
-//
-//Route::get('/viewStudent', 'StudentController@view_student_my_home')->name('viewStudentMyHome');
-//
-//Route::get('/viewCourse1', 'StudentController@view_course1')->name('viewCourse1');
-//
-//Route::get('/viewCourse2', 'StudentController@view_course2')->name('viewCourse2');
-//
-//Route::get('/viewCourse3', 'StudentController@view_course3')->name('viewCourse3');
-//
+
+Route::get('/markStudentAttendance', 'StudentAttendance@markStudentAttendance')->name('mark_student_attendance');
+
+Route::get('/studentAttendanceHistory', 'StudentAttendance@getAllStudentAttendance')->name('view_student_attendance_history');
 
 
 
