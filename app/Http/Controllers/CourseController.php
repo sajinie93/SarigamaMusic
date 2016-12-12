@@ -29,7 +29,7 @@ class CourseController extends Controller
     }
 
     public function filterCourse(){
-        $filtered_courses = Course::all();   // fetch filtered data from database
+        $filtered_courses = Course::list(['name','id']);   // fetch filtered data from database
         return view('addCourse',[
             'courses' => $filtered_courses
         ]);

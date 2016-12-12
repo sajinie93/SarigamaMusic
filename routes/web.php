@@ -44,6 +44,9 @@ Route::get('/markStudentAttendance', 'StudentAttendance@markStudentAttendance')-
 
 Route::get('/studentAttendanceHistory', 'StudentAttendance@getAllStudentAttendance')->name('view_student_attendance_history');
 
+Route::get('/teacherSalary', 'TeacherController@getTeacherSalary')->name('teacher_salary');
+
+
 
 
 
