@@ -4,7 +4,7 @@
     <h4>SaRigaMa MusIc</h4>
     <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#section1">Dashboard</a></li>
-        <li><a href={{route('all_classes')}}>Class</a></li>
+        <li><a href={{route('all_classes')}}>Course</a></li>
         <li><a href="#section2">Add Payment</a></li>
         <li><a href="#section2">Payment history</a></li>
         <li><a href={{route('teacher_salary')}}>Teacher salary</a></li>
